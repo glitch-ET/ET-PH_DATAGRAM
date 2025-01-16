@@ -1,0 +1,165 @@
+{
+    "MSG": {
+        "IP_HEADER": {},
+        "UDP_HEADER": {},
+        "MSG_HEADER": {
+            "MSG.TYPE": {
+                "type": "enum",
+                "values": [
+                    {
+                        "name": "RQT",
+                        "type": "enum",
+                        "values": [
+                            {
+                                "name": "RQT.RPT",
+                                "type": "enum",
+                                "value": 10,
+                                "doc": "3.1.1.1"
+                            },
+                            {
+                                "name": "RQT.CMD",
+                                "type": "integer",
+                                "value": 15,
+                                "doc": "3.1.1.2"
+                            },
+                            {
+                                "name": "RQT.UPT",
+                                "type": "integer",
+                                "value": 19,
+                                "doc":"3.1.1.3"
+                            }
+                        ],
+                        "doc":"3.1.1"
+                    },
+                    {
+                        "name":"ACK",
+                        "type":"enum",
+                        "values":[
+
+                            {
+                                "name":"ACK.RPT",
+                                "type":"integer",
+                                "value":21,
+                                "doc":"3.1.2.1"
+                            },
+                            {
+                                "name":"ACK.WAIT",
+                                "type":"integer",
+                                "value":22,
+                                "doc":"3.1.2.2"
+                            },
+                            {
+                                "name":"ACK.ERR",
+                                "type":"integer",
+                                "value":25,
+                                "doc":"3.1.2.3"
+                            },
+                            {
+                                "name":"ACK.ACK",
+                                "type":"integer",
+                                "value":27,
+                                "doc":"3.1.2.4"
+                            }
+                            ],
+                            "doc":"3.1.2"
+                        },
+                        {
+                            "name":"RSP",
+                            "type":"enum",
+                            "values":[
+                                {
+                                    "name":"RSP.RPT",
+                                    "type":"integer",
+                                    "value":30,
+                                    "doc":"3.1.3.1"
+                                },
+                                {
+                                    "name":"RSSP.CMP",
+                                    "type":"integer",
+                                    "value":32,
+                                    "doc":"3.1.3.2"   
+                                },
+                                {
+                                    "name":"RSP.WARN",
+                                    "type":"integer",
+                                    "value":34,
+                                    "doc":"3.1.3.3"
+                                },
+                                {
+                                    "name":"RSP.ERR",
+                                    "type":"integer",
+                                    "value":35,
+                                    "doc":"3.1.3.4"
+                                }
+                                
+                            ],
+                            "doc":"3.1.3"
+                         },
+                         {
+                            "name":"SYS",
+                            "type":"enum",
+                            "values":[
+                                {
+                                    "name":"SYS.FUJS",
+                                    "type":"integer",
+                                    "value":40,
+                                    "doc":"3.1.4.1"
+                                },
+                                {
+                                    "name":"SYS.ACK",
+                                    "type":"integer",
+                                    "value":42,
+                                    "doc":"3.1.4.2"
+                                },
+                                {
+                                    "name":"SYS.POLL",
+                                    "type":"integer",
+                                    "value":43,
+                                    "doc":"3.1.4.3"
+                                },
+                                {
+                                    "name":"SYS.PGM",
+                                    "type":"integer",
+                                    "value":44,
+                                    "doc":"3.1.4.4"
+                                },
+                                {
+                                    "name":"SYS.FERR",
+                                    "type":"integer",
+                                    "value":45,
+                                    "doc":"3.1.4.5"
+                                }
+                            ],
+                            "doc":"3.1.4"
+                         },
+                         {
+                            "name":"ERR",
+                            "type":"enum",
+                            "values":[
+                                {
+                                    "name":"ERR.WARN",
+                                    "type":"integer",
+                                    "value":50,
+                                    "doc":"3.1.5.1"
+                                },
+                                {
+                                    "name":"ERR.ERR",
+                                    "type":"integer",
+                                    "value":55,
+                                    "doc":"3.1.2.2"
+                                },
+                                {
+                                    "name":"ERR.MLTY/CRASH/SOS",
+                                    "type":"integer",
+                                    "value":56,
+                                    "doc":"3.1.2.3"
+                                } 
+
+                            ],
+                        "doc":"3.1.5"
+                         }
+                    ]
+            }
+        }
+    }
+}
